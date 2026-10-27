@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0d14">
+  <title>AuraLeaderboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">A</span>
+      <span>AURA<span class="brand-light">LEADERBOARD</span></span>
+    </a>
+    <a class="nav-link" href="admin.html">Admin</a>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">THE COMMUNITY BOARD</p>
+      <h1>Earn your <span>aura.</span></h1>
+      <p class="hero-copy">
+        Every point tells a story. Check the rankings and see who's leading the pack.
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat-card">
+          <span class="stat-label">MEMBERS</span>
+          <strong id="member-count">—</strong>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">TOTAL AURA</span>
+          <strong id="total-aura">—</strong>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">TOP MEMBER</span>
+          <strong id="top-rank">—</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="board">
+      <div class="board-heading">
+        <div>
+          <p class="eyebrow">CURRENT STANDINGS</p>
+          <h2>Leaderboard</h2>
+        </div>
+
+        <label class="search-wrap">
+          <span aria-hidden="true">⌕</span>
+          <span class="sr-only">Search members</span>
+          <input id="search" type="search" placeholder="Search members...">
+        </label>
+      </div>
+
+      <div class="table-head">
+        <span>RANK / MEMBER</span>
+        <span>AURA POINTS</span>
+      </div>
+
+      <div id="leaderboard" class="leaderboard">
+        <div class="loading">Connecting to database...</div>
+      </div>
+
+      <p id="empty-state" class="empty-state" hidden>
+        No members found.
+      </p>
+
+      <p id="data-note" class="board-footnote">
+        Loading leaderboard data...
+      </p>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> AuraLeaderboard</span>
+      <span>Built for the community ♥</span>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
